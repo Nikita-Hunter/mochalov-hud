@@ -1,0 +1,27 @@
+.tab-block {
+    position: relative;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: var(--color-accent);
+    font-weight: 500;
+    display: inline-block;
+    cursor: default;
+    &::after{
+        content: '';
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--color-white);
+        position: absolute;
+    }
+}
+.heading-xxl {
+    --color-heading: var(--color-white);
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-heading);
+    cursor: default;
+    line-height: 1.3;
+}

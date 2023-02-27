@@ -1,0 +1,199 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #090909;
+  --color-accent: #FF2829;
+  --color-blue: #0986FF;
+  --font-family: "JetBrains Mono", sans-serif;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/assets/fonts/Jetbrainsmonoregular.woff2) format(woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/assets/fonts/Jetbrainsmonomedium.woff2) format(woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/assets/fonts/Jetbrainsmonobold.woff2) format(woff2);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/assets/fonts/Jetbrainsmonoextrabold.woff2) format(woff2);
+  font-weight: 700;
+  font-style: normal;
+}
+.hud-application {
+  width: 100%;
+  font-family: var(--font-family);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 1rem;
+}
+.hud-application__wrapper {
+  width: 100%;
+}
+
+.hud-container {
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.index-main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.index-main__content {
+  width: 100%;
+  height: 100%;
+}
+.index-main::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/images/component-grid.svg");
+  background-size: 4.375rem;
+  background-repeat: repeat;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.tab-block {
+  position: relative;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: var(--color-accent);
+  font-weight: 500;
+  display: inline-block;
+  cursor: default;
+}
+.tab-block::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-white);
+  position: absolute;
+}
+
+.heading-xxl {
+  --color-heading: var(--color-white);
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-heading);
+  cursor: default;
+  line-height: 1.3;
+}
+
+.button {
+  cursor: pointer;
+  padding: 12px 15px;
+  border: none;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.button--light {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-weight: 500;
+  position: relative;
+  margin-left: 7px;
+}
+.button--light:hover::after {
+  border: 1px solid white;
+}
+.button--light::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  transform: translate(-50%, -50%);
+  transition: border 200ms ease-out;
+}
+
+.hud-card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+.hud-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid;
+  border-image-source: linear-gradient(#fff, #fff);
+  border-image-width: 3px 10px;
+}
+.hud-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid;
+  border-image-source: linear-gradient(#fff, #fff);
+  border-image-width: 10px 3px;
+}
+.hud-card__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.intro-section__content {
+  display: grid;
+  grid-template-columns: 1fr 474px;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+.intro-section__content::after {
+  content: attr(data-count);
+  font-size: 21.25rem;
+  color: rgba(255, 40, 41, 0.1);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+}
+.intro-section__content-text {
+  width: 100%;
+}
+.intro-section__content-tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}/*# sourceMappingURL=main-style.min.css.map */

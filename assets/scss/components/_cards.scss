@@ -1,0 +1,38 @@
+.hud-card {
+
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba($color: $white, $alpha: 0.25);
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid;
+        border-image-source: linear-gradient(#fff, #fff);
+        border-image-width: 3px 10px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid;
+        border-image-source: linear-gradient(#fff, #fff);
+        border-image-width: 10px 3px;
+    }
+    &__body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__count {
+    }
+}

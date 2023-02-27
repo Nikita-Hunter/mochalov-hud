@@ -1,0 +1,11 @@
+$black: #090909;
+$accent: #FF2829;
+$white: #ffffff;
+$blue: #0986FF;
+:root{
+    --color-white: #{$white};
+    --color-black: #{$black};
+    --color-accent: #{$accent};
+    --color-blue: #{$blue};
+    --font-family: 'JetBrains Mono', sans-serif;
+}
